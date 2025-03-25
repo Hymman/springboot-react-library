@@ -1,51 +1,54 @@
-#  Spring Boot + React Full-Stack Library Application
+Library Management System – Full Stack Project
 
-This is a full-stack library management system built with **Spring Boot**, **MySQL**, and **React**.  
-It allows users to view, add, and manage books in a library with a modern web interface.
+A full-stack Library Management application built using Spring Boot (Java), React.js, and MySQL.
 
----
+This project allows users to perform CRUD operations on a list of books, with both a frontend interface and a RESTful backend service.
 
-##  Tech Stack
-
--  **Backend**: Java 17 + Spring Boot
--  **Frontend**: React.js (with functional components & hooks)
--  **Database**: MySQL 8
--  **DevOps**: Docker + Docker Compose
-
----
-
-##  How to Run
-
-> Make sure you have Docker installed.
-
-### Start with Docker Compose
-
-bash
-docker-compose up --build
-
-This will start:
-
-MySQL container on port 3306
-
-Spring Boot backend on port 8080
-
-React frontend on port 3000
-
-
-project_lib/
-├── backend/         --> Spring Boot code
-├── frontend/        --> React app (library_ui)
-├── compose.yaml     --> Docker Compose configuration
-└── README.md
+Tech Stack
+----------
+- Backend: Java, Spring Boot, Spring Data JPA, REST API
+- Frontend: React.js, Axios, Bootstrap
+- Database: MySQL
+- Build Tools: Maven
+- Dev Tools: IntelliJ, VS Code
 
 Features
-Add book with title, author, and year
+--------
+- Add, edit, and delete books
+- View book list dynamically
+- Connected frontend & backend via RESTful APIs
+- Structured and scalable project architecture
 
-View book list instantly from React UI
+Installation & Run
+------------------
 
-Fully containerized with Docker
+Backend:
+cd backend
+mvn spring-boot:run
 
-Clean service-based backend structure (Controller - Service - Repository)
+Frontend:
+cd frontend
+npm install
+npm start
+
+Project Structure
+-----------------
+springboot-react-library/
+├── backend/         # Spring Boot REST API
+├── frontend/        # React frontend
+└── README.md
+
+Future Improvements
+-------------------
+- JWT-based authentication
+- Dockerization
+- Deployment on AWS (EC2 / Elastic Beanstalk)
+- CI/CD pipeline (GitHub Actions)
+
+Author
+------
+Developed by @Hymman
+Feel free to contribute or share feedback.
 
 
 Environment variables for database credentials are injected via Docker Compose
@@ -56,10 +59,3 @@ spring.datasource.url=${SPRING_DATASOURCE_URL}
 
 You can manage these using .env file (optional) and gitignore protects them from leaking.
 
-Author
-GitHub: Hymman
-Built as part of a full-stack learning journey combining Java, React, Docker, and GitHub.
-
-This is just the beginning — security, pagination, search, and update/delete features can be added later.
-
-Contributions and suggestions are welcome 
